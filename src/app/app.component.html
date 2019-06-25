@@ -4,8 +4,9 @@
     {{ title }}
   </h1>
 
-<form  [formGroup]="passForm">  
-<!-- email-->
+<form  [formGroup]="passForm" >  
+
+  <!-- email-->
   <mat-form-field class="inBox">
     <input [(ngModel)]="email" formControlName="email"  matInput placeholder="email" required/>
 
@@ -14,7 +15,7 @@
 
   <!-- new password-->
   <mat-form-field class="inBox">
-  <input  [(ngModel)]="newPass" formControlName="newPass"  matInput placeholder="New Password" [type]="hide ? 'newPass' : 'text' " required/>
+  <input    matInput placeholder="new password" [type]="hide ? 'password' : 'text'" [(ngModel)]="newPass" formControlName="newPass" required>
  
   <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 
     'visibility_off'}}</mat-icon>
@@ -26,7 +27,7 @@
 
 <!-- confirm password-->
   <mat-form-field class="inBox">
-      <input  [(ngModel)]="confirmPass" formControlName="confirmPass"  matInput placeholder="Confirm Password" [type]="hide ? 'confirmPass' : 'text'" required/>
+      <input   matInput placeholder="confirm Password" [type]="hide ? 'password' : 'text' " [(ngModel)]="confirmPass" formControlName="confirmPass"  required>
 
       <mat-icon matSuffix (click)="hide=!hide">{{hide ? 'visibility' :
         'visibility_off'}}</mat-icon>

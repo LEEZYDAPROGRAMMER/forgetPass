@@ -14,18 +14,18 @@ export class AppComponent {
   email:string="";
   newPass:string="";
   confirmPass:string="";
-
+patterns="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@!%*?&]).{8,}"
 
 //create constructor
 
   constructor(formBuilder : FormBuilder) 
   { 
-
+console.log(this.patterns)
   this.passForm= formBuilder.group(
     {
           
-          email: ['', Validators.email],
-          newPass: ['', [ Validators.minLength(8),Validators.maxLength(8),Validators.pattern('(?=.*[a-z])(?=.*[A-Z]) (?=.*[0-9])(?=.*[!@#$%^&*])[A-Za-z\d$@!%*?&].{8,}')]],
+          email: ['',Validators.email],
+          newPass: ['',Validators.pattern(this.patterns)]
         // confirmPass: ['', Validators.required]
      });
     
