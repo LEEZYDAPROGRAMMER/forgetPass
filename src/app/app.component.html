@@ -1,0 +1,41 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    {{ title }}
+  </h1>
+
+<form  [formGroup]="passForm">  
+<!-- email-->
+  <mat-form-field class="inBox">
+    <input [(ngModel)]="email" formControlName="email"  matInput placeholder="email" required/>
+
+  </mat-form-field>
+  <br/>
+
+  <!-- new password-->
+  <mat-form-field class="inBox">
+  <input  [(ngModel)]="newPass" formControlName="newPass"  matInput placeholder="New Password" [type]="hide ? 'newPass' : 'text' " required/>
+ 
+  <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 
+    'visibility_off'}}</mat-icon>
+
+</mat-form-field>
+
+  
+  <br/>
+
+<!-- confirm password-->
+  <mat-form-field class="inBox">
+      <input  [(ngModel)]="confirmPass" formControlName="confirmPass"  matInput placeholder="Confirm Password" [type]="hide ? 'confirmPass' : 'text'" required/>
+
+      <mat-icon matSuffix (click)="hide=!hide">{{hide ? 'visibility' :
+        'visibility_off'}}</mat-icon>
+    </mat-form-field>
+
+ 
+  <br/>
+
+  <!-- save button-->
+  <button [disabled]="!passForm.valid" (click) = "submit()"   mat-raised-button color="primary" class="butt" > Confirm </button>
+
+</form>
