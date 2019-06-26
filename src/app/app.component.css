@@ -1,0 +1,50 @@
+.mycard {
+    background-color:#6B00FF;
+   color:#fff;
+   font-family: Helvetica;
+  }
+  
+  .title
+  {
+   
+    color:#6B00FF;
+    font-family: Helvetica;
+
+  }
+  .headerImage {
+    background-image: url('C:\Users\CodeTribe\forgetPass\src\assets\img\teamwork-in-the-office (6).png');
+    background-size: cover;
+    background-color:#fff;
+    width: 45px;
+    height: 45px;
+  }
+  .mycard2 {
+    background-color:#fff;
+   color:#6B00FF;
+   font-family: Helvetica;
+   
+  }
+  .re
+  {
+    font-family: Helvetica;
+    color:rgb(253, 6, 6);
+  }
+  .inBox
+  {
+    background-color:#fff;
+    color:#6B00FF;
+    font-family: Helvetica;
+
+  }
+  .butt
+  {
+
+    background-color:#6B00FF;
+    color:#fff;
+    font-family: Helvetica;
+  }
+  .disCard {
+    background-color:#6B00FF;
+   color:#fff;
+   font-family: Helvetica;
+  }

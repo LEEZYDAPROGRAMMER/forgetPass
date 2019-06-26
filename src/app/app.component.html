@@ -1,6 +1,16 @@
 <!--The content below is only a placeholder and can be replaced.-->
+<!--main header.-->
+
+<mat-card class="mycard">
+  <mat-card-header>
+    <div mat-card-avatar class="headerImage"></div>
+    <mat-card-title> WorkRoam </mat-card-title>
+    
+  </mat-card-header>
+</mat-card>
+
 <div style="text-align:center">
-  <h1>
+  <h1   class="title">
     {{ title }}
   </h1>
 
@@ -14,8 +24,8 @@
   <br/>
 
   <!-- new password-->
-  <mat-form-field class="inBox">
-  <input    matInput placeholder="new password" [type]="hide ? 'password' : 'text'" [(ngModel)]="newPass" formControlName="newPass" required>
+  <mat-form-field class="inBox" >
+  <input minlength="8"  maxlength="8"  matInput placeholder="new password" [type]="hide ? 'password' : 'text'" [(ngModel)]="newPass" formControlName="newPass" required>
  
   <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 
     'visibility_off'}}</mat-icon>
@@ -27,7 +37,7 @@
 
 <!-- confirm password-->
   <mat-form-field class="inBox">
-      <input   matInput placeholder="confirm Password" [type]="hide ? 'password' : 'text' " [(ngModel)]="confirmPass" formControlName="confirmPass"  required>
+      <input minlength="8"  maxlength="8"    matInput placeholder="confirm Password" [type]="hide ? 'password' : 'text' " [(ngModel)]="confirmPass" formControlName="confirmPass"  required>
 
       <mat-icon matSuffix (click)="hide=!hide">{{hide ? 'visibility' :
         'visibility_off'}}</mat-icon>
@@ -40,3 +50,6 @@
   <button [disabled]="!passForm.valid" (click) = "submit()"   mat-raised-button color="primary" class="butt" > Confirm </button>
 
 </form>
+<p class="title"   *ngIf="clic">
+     Successfully Changed !  
+</p>

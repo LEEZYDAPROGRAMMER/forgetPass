@@ -9,7 +9,7 @@ import {FormControl,FormGroup} from '@angular/forms';
 })
 export class AppComponent {
   title = 'Forget Password';
-  
+  clic=false;
   passForm;
   email:string="";
   newPass:string="";
@@ -52,5 +52,11 @@ console.log(this.patterns)
 
   }
 
-   
+   submit()
+   {
+    this.email="";
+    this.newPass="";
+    this.confirmPass="";
+    this.clic=true
+   }
 }
