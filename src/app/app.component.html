@@ -18,9 +18,12 @@
 
   <!-- email-->
   <mat-form-field class="inBox">
-    <input [(ngModel)]="email" formControlName="email"  matInput placeholder="email" required/>
-
+    <input [(ngModel)]="email" formControlName="email"  matInput placeholder="email" required>
+   
+    <mat-icon matSuffix  aria-hidden="false" aria-label="Example home icon"  >
+      email</mat-icon>
   </mat-form-field>
+  
   <br/>
 
   <!-- new password-->
@@ -47,7 +50,7 @@
   <br/>
 
   <!-- save button-->
-  <button [disabled]="!passForm.valid" (click) = "submit()"   mat-raised-button color="primary" class="butt" > Confirm </button>
+  <button [disabled]="!passForm.valid" (click) = "submit()"   mat-raised-button color="primary" class="butt" >Confirm <mat-icon aria-hidden="false" aria-label="Example home icon">arrow_forward</mat-icon> </button>
 
 </form>
 <p class="title"   *ngIf="clic">
